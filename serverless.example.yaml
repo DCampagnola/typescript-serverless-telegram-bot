@@ -1,0 +1,19 @@
+service: aws
+frameworkVersion: '3'
+useDotenv: true
+package:
+  excludeDevDependencies: true
+provider:
+  name: aws
+  runtime: nodejs16.x
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+functions:
+  exampleBot:
+    name: example-bot
+    handler: serverless-bot.handler
+    events:
+      - httpApi:
+          path: /bot
+          method: post

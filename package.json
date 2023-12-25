@@ -1,0 +1,25 @@
+{
+  "name": "serverless-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serverless": "serverless",
+    "release": "serverless deploy",
+    "purge": "serverless remove",
+    "set-webhook": "telegraf -m setWebhook"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-plugin-typescript": "^2.1.5",
+		"serverless": "^3.28.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0",
+    "telegraf": "^4.15.3"
+  }
+}
